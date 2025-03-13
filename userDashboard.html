@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>User Dashboard</h2>
+    
+    <!-- Search for Hotels -->
+    <input type="text" id="searchHotel" placeholder="Search Hotels">
+    <button id="searchButton" onclick="searchHotels()">Search</button>
+
+    <!-- List of Available Hotels -->
+    <div id="hotelList">
+      <h3>Available Hotels</h3>
+      <div class="hotel">
+        <p><b>Grand Hotel</b> - Location: City Center - $120/night</p>
+        <button data-hotel-id="1" onclick="bookHotel('Grand Hotel')">Book Now</button>
+      </div>
+    </div>
+
+    <!-- Booking Form (Hidden initially) -->
+    <div id="bookingForm" style="display:none;">
+      <h3>Booking Form</h3>
+      <input type="text" id="name" placeholder="Full Name">
+      <input type="email" id="email" placeholder="Email">
+      <input type="tel" id="phone" placeholder="Phone">
+      <input type="date" id="date">
+      <input type="number" id="days" placeholder="Number of Days">
+      <button id="confirmBooking" onclick="confirmBooking()">Confirm Booking</button>
+    </div>
+
+    <!-- Booking Message -->
+    <p id="bookingMessage" style="display:none;">Booking Successful!</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

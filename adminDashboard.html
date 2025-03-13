@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Admin Dashboard</h2>
+    
+    <!-- List of All Bookings -->
+    <h3>All Bookings</h3>
+    <table id="bookingTable">
+      <thead>
+        <tr>
+          <th>User Name</th>
+          <th>Hotel Name</th>
+          <th>Booking Date</th>
+          <th>Days</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="booking1">
+          <td>John Doe</td>
+          <td>Grand Hotel</td>
+          <td>2025-05-10</td>
+          <td>3</td>
+          <td>Confirmed</td>
+          <td><button onclick="cancelBooking('booking1')">Cancel</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Cancellation Message -->
+    <p id="cancelMessage" style="display:none;">Booking Cancelled Successfully!</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
